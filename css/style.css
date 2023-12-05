@@ -4,15 +4,51 @@ body {
     color: #434455;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
 ul {
     list-style-type: none;
+    margin: 0;
+    padding-left: 0;
 }
 
 a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
+
+.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
 /* header */
+
+header {
+    border-bottom: 1px solid  #E7E9FC;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+}
 
 .logo {
     color: #4D5AE5;
@@ -22,10 +58,18 @@ a {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
 }
 
 .logo-span {
     color: #2E2F42;
+}
+
+.header-ul {
+    display: flex;
+    margin-left: 76px;
+    gap: 40px;
 }
 
 .nav-link {
@@ -34,6 +78,9 @@ a {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
 }
 
 .nav-link:hover,
@@ -45,12 +92,20 @@ a {
     font-style: normal;
 }
 
+.address-ul {
+display: flex;
+gap: 40px;
+
+}
+
 .contacts {
     color: #434455;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .contacts:hover,
@@ -64,6 +119,7 @@ a {
 
 .box-section {
     background-color: #2E2F42;
+    padding: 188px 0;
 }
 
 .header-title {
@@ -73,6 +129,10 @@ a {
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
+    width: 496px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 48px;
 }
 
 .button-content {
@@ -83,6 +143,12 @@ a {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
+    display: block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 .button-content:hover,
@@ -92,12 +158,36 @@ a {
 
 /* section 2 */
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.advantages-list {
+    display: flex;
+    padding: 120px 0;
+    gap: 24px;
+}
+
+.advantages-item {
+    width: calc((100% - 72px)/ 4);
+}
+
 .header-advantages {
     color: #2E2F42;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .text-advantages {
@@ -111,6 +201,7 @@ a {
 
 .our-team-section {
     background-color: #F4F4FD;
+    padding: 120px 0;
 }
 
 .header-team {
@@ -121,10 +212,23 @@ a {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 .list-team {
+    display: flex;
+    gap: 24px;
+}
+
+.item-team {
     background-color: #FFF;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    width: calc((100% - 72px)/4);
+}
+
+.team-info {
+padding: 32px 0;
 }
 
 .name {
@@ -134,6 +238,7 @@ a {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .job-title {
@@ -146,6 +251,26 @@ a {
 
 /* section 4 */
 
+.portfolio-section {
+    padding: 120px 0;
+}
+
+.list-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+
+.item-portfolio {
+    width: calc((100% - 48px)/3);
+}
+
+.portfolio-info {
+    border: 1px solid #E7E9FC;
+    border-top: none;
+    padding: 32px 16px;
+}
+
 .header-portfolio {
     color: #2E2F42;
     text-align: center;
@@ -154,6 +279,7 @@ a {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 .subtitle-portfolio {
@@ -162,6 +288,7 @@ a {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-top: 8px;
 }
 
 .text-portfolio {
@@ -175,6 +302,7 @@ a {
 
 .footer-box {
     background-color: #2E2F42;
+    padding: 101.5px 0 100px 0;
 }
 
 .logo-span-footer {
@@ -187,4 +315,6 @@ a {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-top: 17.5px;
+    max-width: 264px;
 }
